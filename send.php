@@ -32,10 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->setFrom('jasminvarvadiya@gmail.com', 'Contact Form');
         $mail->addAddress('jasminvarvadiya@gmail.com');
 
-        // Reply to user
+        
         $mail->addReplyTo($email, $name);
 
-        // Email Content
+        
         $mail->isHTML(true);
         $mail->Subject = ' New Contact Form Submission';
 
@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div style='max-width:500px;margin:50px auto;padding:25px;
         background:#d4edda;color:#155724;border-radius:10px;
         text-align:center;font-family:Arial'>
-            <h2>✅ Email Sent Successfully</h2>
+            <h2> Email Sent Successfully</h2>
             <p>Thank you, $name. Your message has been sent.</p>
             <a href='index.php'>Go Back</a>
         </div>
