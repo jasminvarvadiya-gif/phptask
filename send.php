@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
 
-        // SMTP Configuration
+     
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        // Sender & Receiver
+
         $mail->setFrom('jasminvarvadiya@gmail.com', 'Contact Form');
         $mail->addAddress('jasminvarvadiya@gmail.com');
 
@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div style='max-width:500px;margin:50px auto;padding:25px;
         background:#f8d7da;color:#721c24;border-radius:10px;
         text-align:center;font-family:Arial'>
-            <h2>❌ Email Failed</h2>
+            <h2> Email Failed</h2>
             <p>{$mail->ErrorInfo}</p>
         </div>
         ";
